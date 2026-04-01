@@ -4,9 +4,35 @@ A p2p triangle system using ZMQ pub/sub messaging with a cloud broker. Supports 
  
  
 ## Architecture
+```mermaid
+flowchart TD
+    Cloud -->|spawn| Player
+    Cloud <-.->|heartbeat| Robot
 
- ![Architecture](arch_diagram.jpeg)
+    Robot -->|pub: sensor| Player
+    Player -->|pub: processed\nsub: sensor| Robot
+
+    Player -->|pub: processed| User
+    User -->|pub: command| Player
+
+    Robot <-->|ZMQ topics directly\nStatus: All| User
+
+    subgraph Robot topics
+        R1[pub: sensor]
+        R2[sub: command]
+    end
+
+    subgraph User topics
+        U1[pub: command]
+        U2[sub: processed, sensor]
+    end
+
+    subgraph Player topics
+        P1[pub: processed]
+        P2[sub: sensor]
+    end
  
+```
 - **Cloud** — FastAPI server that registers robots, spawns players, and handles user connections
 - **Player** — ZMQ broker spawned per robot, routes messages between robot and user
 - **Robot** — Runs on JetBot, publishes sensor data and receives commands
