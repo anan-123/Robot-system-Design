@@ -72,10 +72,10 @@ Then enter the robot id when prompted and start sending commands.The sensor valu
 
 ## Configuration — config.py:
 Set these:
-CLOUD_URL
-BASE_PORT
-ZMQ_TOKEN
-## Security
+- CLOUD_URL
+- BASE_PORT
+- ZMQ_TOKEN
+#### Security
  
 - **HTTP** — all `/connect` requests require a `user-token` header matching `ZMQ_TOKEN`
 - **ZMQ** — every message includes a token field, rejected by the player if wrong
