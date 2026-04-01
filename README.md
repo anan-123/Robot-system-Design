@@ -81,7 +81,7 @@ ZMQ_TOKEN
 - **ZMQ** — every message includes a token field, rejected by the player if wrong
 - Unauthorized users cannot get port info or publish/subscribe to any topic
 
-# Latency Monitoring
+#### Latency Monitoring
  
 The user client automatically prints latency for every received sensor message:
 ```
@@ -90,10 +90,10 @@ e.g. latency: 5.3ms
  
 This is measured as the time between the robot sending the message and the user receiving it. Useful for diagnosing network issues.
 
-# Testing
+#### Testing
 Change number of robots to spawn in run_robot.sh. Currently set to 25 robots.
 
-# Scaling beyond Local system
+#### Scaling beyond Local system
 Change cloud url to public url. And change CLOUD_HOST IP. If all three player, user and robot are not in same network then the urls must be public exposed or have a cloud relay based system.ss
 
 ## System Design and Testing
