@@ -4,11 +4,8 @@ A p2p triangle system using ZMQ pub/sub messaging with a cloud broker. Supports 
  
  
 ## Architecture
- 
-```
-image
-Robot (r2.py) ←→ Player (player.py) ←→ Cloud (cloud.py) ←→ User (u2.py)
-```
+
+ ![Architecture](arch_diagram.jpeg)
  
 - **Cloud** — FastAPI server that registers robots, spawns players, and handles user connections
 - **Player** — ZMQ broker spawned per robot, routes messages between robot and user
