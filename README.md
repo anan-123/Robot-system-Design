@@ -6,7 +6,7 @@ A p2p triangle system using ZMQ pub/sub messaging with a cloud broker. Supports 
 ## Architecture
 For diagram, scroll to the end of the Readme.
 - **Cloud** — FastAPI server that registers robots, spawns players, and handles user connections
-- **Player** — ZMQ broker spawned per robot, routes messages between robot and user
+- **Player** —  spawned per robot
 - **Robot** — Runs on JetBot, publishes sensor data and receives commands
 - **User** — CLI client to send commands and receive sensor data from a robot
  
