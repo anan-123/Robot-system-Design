@@ -92,7 +92,7 @@ Change number of robots to spawn in run_robot.sh. Currently set to 25 robots.
 Change cloud url to public url. And change CLOUD_HOST IP. If all three player, user and robot are not in same network then the urls must be public exposed or have a cloud relay based system.ss
 
 ## System Design and Testing
-More detailed explanations and discussion for choices, testing and scalability can be found in the writeup.pdf file.
+More detailed explanations and discussion for choices, testing and scalability can be found in the Documentation.pdf file.
 
 ## Architecture diagram
 ![Architecture](arch_diagram.jpeg)
