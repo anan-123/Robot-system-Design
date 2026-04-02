@@ -35,6 +35,7 @@ pip install -r requirements.txt
 or
 ```bash
 pip install fastapi uvicorn aiohttp pyzmq
+pip install "tornado>=6.1" 
 ```
 
 ## How to Run
